@@ -7,8 +7,8 @@ pipeline {
     }  
   
     environment {
-        AWS_REGION     = 'ap-south-2'
-        ECR_REPOSITORY = 'migration'
+        AWS_REGION     = 'ap-south-1'
+        ECR_REPOSITORY = 'jenkins-migration-demo'
         IMAGE_TAG      = "${BUILD_NUMBER}"
         APP_PORT       = '8081'
     }
