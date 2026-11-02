@@ -18,7 +18,7 @@ app.get("/health", (req, res) => {
 app.get("/api/migration", (req, res) => {
   res.json({
     title: "Jenkins to GitHub Actions Migration",
-    owner: "DevOps Shack",
+    owner: "Myapp",
     status: "Demo Ready",
     stages: ["Source", "Test", "Build", "Security", "Container", "Deploy"]
   });
@@ -26,7 +26,7 @@ app.get("/api/migration", (req, res) => {
 
 if (require.main === module) {
   app.listen(port, () => {
-    console.log(`DevOps Shack migration demo running on port ${port}`);
+    console.log(`Myapp migration demo running on port ${port}`);
   });
 }
 

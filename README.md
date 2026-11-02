@@ -1,4 +1,4 @@
-# DevOps Shack
+# Myapp
 
 ## CI/CD Pipeline Migration Lab
 
@@ -6,20 +6,20 @@
 
 **A production-style DevOps project that demonstrates how to migrate an end-to-end Jenkins pipeline to GitHub Actions while preserving the existing application and deployment target.**
 
-[![DevOps Shack](https://img.shields.io/badge/DevOps%20Shack-Migration%20Lab-2563EB?style=for-the-badge)](https://devopsshack.com)
+![Myapp](https://img.shields.io/badge/Myapp-Migration%20Lab-2563EB?style=for-the-badge)
 ![Node.js](https://img.shields.io/badge/Node.js-22-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Jenkins-Legacy%20Pipeline-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Migrated%20Pipeline-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-ECR%20%7C%20SSM%20%7C%20EC2-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white)
 
-**Learn. Build. Automate. — DevOps Shack**
+**Learn. Build. Automate. — Myapp**
 
 ---
 
 ## Project overview
 
-This **DevOps Shack CI/CD Pipeline Migration Lab** is a hands-on project for learning how to move pipeline orchestration from a Jenkins server into a repository-native GitHub Actions workflow.
+This **Myapp CI/CD Pipeline Migration Lab** is a hands-on project for learning how to move pipeline orchestration from a Jenkins server into a repository-native GitHub Actions workflow.
 
 The project keeps the delivery goal unchanged:
 
@@ -31,7 +31,7 @@ The project keeps the delivery goal unchanged:
 6. Deploy the container to the existing Amazon EC2 server.
 7. Verify the release through the `/health` endpoint.
 
-The application is a Node.js and Express migration dashboard branded for **DevOps Shack**. The same repository contains both pipeline implementations so that every Jenkins stage can be compared with its GitHub Actions replacement.
+The application is a Node.js and Express migration dashboard branded for **Myapp**. The same repository contains both pipeline implementations so that every Jenkins stage can be compared with its GitHub Actions replacement.
 
 > **Migration principle:** change the CI/CD orchestrator—not the application, container contract, registry pattern, deployment server, or health-check strategy.
 
@@ -39,9 +39,9 @@ The application is a Node.js and Express migration dashboard branded for **DevOp
 
 ## Deployed application preview
 
-The deployed application provides an interactive **DevOps Shack CI/CD Migration Lab** dashboard that visualizes the Jenkins-to-GitHub Actions workflow, pipeline stages, platform comparison and deployment status.
+The deployed application provides an interactive **Myapp CI/CD Migration Lab** dashboard that visualizes the Jenkins-to-GitHub Actions workflow, pipeline stages, platform comparison and deployment status.
 
-![DevOps Shack CI/CD Pipeline Migration Dashboard](./devops-shack-pipeline-migration-dashboard.png)
+![Myapp CI/CD Pipeline Migration Dashboard](./myapp-pipeline-migration-dashboard.png)
 
 ---
 
@@ -196,7 +196,7 @@ Migration-Demo-Project-main/
 │       └── cicd.yml          # Migrated GitHub Actions CI/CD pipeline
 ├── public/
 │   ├── app.js                # Interactive migration workflow UI
-│   ├── index.html            # DevOps Shack migration dashboard
+│   ├── index.html            # Myapp migration dashboard
 │   └── styles.css            # Application styling
 ├── .dockerignore             # Docker build exclusions
 ├── Dockerfile                # Node.js 22 production image
@@ -253,7 +253,7 @@ Migration-Demo-Project-main/
 
 ---
 
-## Run the DevOps Shack application locally
+## Run the Myapp application locally
 
 ```bash
 git clone https://github.com/<YOUR_ACCOUNT>/<YOUR_REPOSITORY>.git
@@ -273,7 +273,7 @@ http://localhost:8080
 
 | Endpoint | Purpose | Expected result |
 |---|---|---|
-| `/` | DevOps Shack migration dashboard | HTML page |
+| `/` | Myapp migration dashboard | HTML page |
 | `/health` | Runtime health check | HTTP 200 with `status: UP` |
 | `/api/migration` | Migration metadata | JSON describing the demo stages |
 
@@ -290,14 +290,14 @@ curl http://localhost:8080/health
 Build the image:
 
 ```bash
-docker build -t devopsshack/migration-demo:local .
+docker build -t myapp/migration-demo:local .
 ```
 
 Start the container:
 
 ```bash
 docker run --rm --name migration-demo -p 8081:8080 \
-  devopsshack/migration-demo:local
+  myapp/migration-demo:local
 ```
 
 Verify it:
@@ -520,7 +520,7 @@ curl -i http://localhost:8082/health
 
 ## DevOps learning outcomes
 
-After completing this **DevOps Shack** project, you should be able to explain and demonstrate:
+After completing this **Myapp** project, you should be able to explain and demonstrate:
 
 - How Jenkins concepts translate into GitHub Actions concepts.
 - Why CI and CD should be separated into dependent jobs.
@@ -533,14 +533,13 @@ After completing this **DevOps Shack** project, you should be able to explain an
 
 ---
 
-## About DevOps Shack
+## About Myapp
 
-**DevOps Shack** creates practical, production-oriented learning content across DevOps, DevSecOps, cloud, containers, Kubernetes, Terraform, GitOps, observability and AI for DevOps.
+**Myapp** is a practical, production-oriented learning project covering DevOps, DevSecOps, cloud, containers, Kubernetes, Terraform, GitOps, observability and AI for DevOps.
 
-- Website: [devopsshack.com](https://devopsshack.com)
 - GitHub: [github.com/jaiswaladi246](https://github.com/jaiswaladi246)
 
-### Built for the DevOps community by DevOps Shack
+### Built for the DevOps community by Myapp
 
 **Learn. Build. Automate.**
 # Migration-Project

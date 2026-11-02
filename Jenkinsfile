@@ -7,7 +7,7 @@ pipeline {
     }  
   
     environment {
-        AWS_REGION     = 'ap-south-1'
+        AWS_REGION     = 'ap-south-2'
         ECR_REPOSITORY = 'jenkins-migration-demo'
         IMAGE_TAG      = "${BUILD_NUMBER}"
         APP_PORT       = '8081'
@@ -15,9 +15,9 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
+        stage('Git Checkout') {
             steps {
-                checkout scm
+                git branch: 'main', url: 'https://github.com/nagaraj0205/Migration-Project.git'
             }
         }
 

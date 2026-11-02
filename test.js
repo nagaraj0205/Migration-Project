@@ -18,7 +18,7 @@ async function runTests() {
     const pageResponse = await fetch(baseUrl);
     const page = await pageResponse.text();
 
-    if (!pageResponse.ok || !page.includes("DevOps Shack")) {
+    if (!pageResponse.ok || !page.includes("Myapp")) {
       throw new Error("UI route test failed");
     }
 
